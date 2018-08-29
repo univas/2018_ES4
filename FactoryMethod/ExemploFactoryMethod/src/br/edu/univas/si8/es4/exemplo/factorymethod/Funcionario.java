@@ -8,12 +8,14 @@ public abstract class Funcionario {
 
 	public abstract double getSalario();
 
+	public abstract CalculadoraImposto createCalculadora();
+
 	public double calcularSalarioLiquido() {
-		// double salario = getSalario();
-		// double comissaoCalculada = salario * comissao;
-		// double impostos = ???.calcular();
-		// return salario + comissaoCalculada - impostos;
-		return 0;
+		double salario = getSalario();
+		double comissaoCalculada = salario * comissao;
+		CalculadoraImposto calculadora = createCalculadora();
+		double impostos = calculadora.calcular();
+		return salario + comissaoCalculada - impostos;
 	}
 
 	public String getNome() {

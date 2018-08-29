@@ -10,6 +10,11 @@ public class Mensalista extends Funcionario {
 		return salarioMensal + (horasExtras * salarioMensal / 160);
 	}
 
+	@Override
+	public CalculadoraImposto createCalculadora() {
+		return new CalculadoraImpostoPorMes(getSalario());
+	}
+
 	public double getSalarioMensal() {
 		return salarioMensal;
 	}

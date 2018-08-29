@@ -1,6 +1,6 @@
 package br.edu.univas.si8.es4.exemplo.factorymethod;
 
-public class CalculadoraImpostoPorHora {
+public class CalculadoraImpostoPorHora implements CalculadoraImposto {
 
 	private double salario;
 

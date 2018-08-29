@@ -10,6 +10,11 @@ public class Horista extends Funcionario {
 		return valorHora * horasTrabalhadas;
 	}
 
+	@Override
+	public CalculadoraImposto createCalculadora() {
+		return new CalculadoraImpostoPorHora(getSalario());
+	}
+
 	public double getValorHora() {
 		return valorHora;
 	}
