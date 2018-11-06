@@ -5,7 +5,7 @@ public class Runner {
 	public static void main(String[] args) {
 		PedidoDAO dao = construirCadeia();
 
-		for (int i = 0; i < 1000; i++) {
+		for (int i = 0; i < 100; i++) {
 			dao.inserir(null);
 		}
 	}
